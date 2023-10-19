@@ -1,0 +1,9 @@
+.generic .list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+.generic .list li{
+    font-size:24px;
+}

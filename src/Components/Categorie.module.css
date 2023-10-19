@@ -1,0 +1,25 @@
+.container_movies{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+.btnShowmore{
+    border: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:black ;
+    color: white;
+}

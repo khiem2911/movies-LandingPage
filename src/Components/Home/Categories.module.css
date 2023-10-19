@@ -1,0 +1,62 @@
+.categories .list{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+  }
+  .categories .list li:hover{
+    cursor: pointer;
+    color: red;
+  }
+
+  .categories .list .active{
+    color: red;
+  }
+  .categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 5rem auto;
+    align-items: center;
+    
+  }
+  .moviesCategories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70rem;
+    padding: 3rem 0;
+    gap: 2rem;
+  }
+  .moviesCategories span{
+    color: black;
+  }
+  a{
+    text-decoration: none;
+  }
+  .info_populate img{
+    width: 24px;
+    height: 24px;
+    margin-left:10px;
+    filter: brightness(0) invert(1);
+  }
+  .info_populate{
+    display: flex;
+    overflow: hidden;
+    justify-content:space-between;
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  #score{
+    color: black;
+    font-size: 12px;
+    background-color: white;
+    font-weight: bold;
+    align-self: center;
+    border-radius: 12px;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  }

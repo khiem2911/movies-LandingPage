@@ -1,0 +1,50 @@
+.navigation .list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+.navigation {
+  width: 30rem;
+  margin: 0;
+  padding: 2rem 0rem 0rem 8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:10
+}
+.navigation .list a {
+  color: white;
+  font-weight:bold;
+  text-decoration: none;
+}
+.navigation .list a.active {
+  color: red;
+  text-decoration: none;
+}
+.navigation .list a:hover{
+  color: red;
+}
+.navigation .list li:hover ul.sub_menu  {
+  display: block;
+  background-color: #434343;
+}
+.navigation .list li{
+  position: relative;
+}
+.navigation .list .sub_menu{
+  position: absolute;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  overflow-x: auto;
+  width: 150px;
+  display: none;
+  max-height: 10rem;
+}
+.navigation .list .sub_menu li a{
+  padding: 8px 14px;
+}
+.navigation .list .sub_menu a:hover{
+  color: red;
+}

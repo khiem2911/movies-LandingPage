@@ -1,0 +1,19 @@
+.listGeneric ul{
+    display: flex;
+    gap: 0.25rem;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    color: #9d9dab;
+    max-width: 20rem;
+    overflow: hidden;
+    margin: 0;
+}
+.listGeneric{
+    padding: 0rem 0.25rem 0rem 0.25rem;
+}
+
+
+
+   
+   
