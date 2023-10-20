@@ -45,7 +45,7 @@ const Categories = () => {
     content = data.map((item) => (
       
       <>
-        <Link to={`detail/${item.id}`}>
+        <Link key={item.id} to={`detail/${item.id}`}>
           <PopulatedMovies
             id={item.id}
             width={200}
@@ -67,8 +67,8 @@ const Categories = () => {
   } else if (inputValue !== "") {
     const inputFilter = data!.filter((item) => item.title.match(inputValue));
     content = inputFilter.map((item) => (
-      <>
-        <div>
+     
+        <div key={item.id}>
           <PopulatedMovies
             id={item.id}
             width={200}
@@ -77,7 +77,7 @@ const Categories = () => {
           />
           <InfoMovies title={item.title} genericsMovies={item.genre_ids} />
         </div>
-      </>
+    
     ));
   }
   return (

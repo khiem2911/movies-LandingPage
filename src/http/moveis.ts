@@ -12,7 +12,6 @@ export const  moviesList = async () =>{
 
 export const fetchCategories = async (value:string,signal:AbortSignal) =>{
     let url = "https://api.themoviedb.org/3/movie/now_playing?api_key=90865bea14b1012286656881417ea75b";
-    console.log(value);
     
     if (value === "Popular") {
       url = "https://api.themoviedb.org/3/movie/popular?api_key=90865bea14b1012286656881417ea75b";

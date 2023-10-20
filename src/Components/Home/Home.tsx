@@ -1,5 +1,5 @@
 import classes from "./Home.module.css";
-import BackgroundBanner from "../BackgroundBanner";
+import BackgroundBanner from "../../UI/BackgroundBanner";
 import Generic from "./Generic";
 import Button from "../../UI/Button";
 import { useLoaderData, json, useNavigate } from "react-router-dom";
@@ -17,16 +17,15 @@ const Home = () => {
   const navigate = useNavigate()
 
   const onRedirect = () =>{
-      navigate(`/detail/${results[1].id}`)
+      navigate(`/detail/${results[4].id}`)
   }
 
   return (
     <>
-      <BackgroundBanner bgDrop={`https://image.tmdb.org/t/p/original${results[1].backdrop_path}`} />
+      <BackgroundBanner bgDrop={`https://image.tmdb.org/t/p/original${results[4].backdrop_path}`} />
       <div className={classes.container}>
         <div className={classes.info_banner}>
-          <h1>{results[1].title}</h1>
-          <Generic  />
+          <h1>{results[4].title}</h1>
           <Button onClick={onRedirect}  classes={classes.btn}>
             <span>Watch Me</span>
             <img
@@ -37,7 +36,7 @@ const Home = () => {
         </div>
         <div className={classes.info_movies}>
           {topPopulatesMovies.map((item) => (
-            <Link to={`detail/${item.id}`}>
+            <Link key={item.id} to={`detail/${item.id}`}>
               <PopulatedMovies
                 id={item.id}
                 bgImage={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}

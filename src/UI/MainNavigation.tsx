@@ -33,27 +33,27 @@ const MainNavigation = () => {
               CATEGORIES
             </NavLink>
             <ul className={classes.sub_menu}>
-              {data?.map((item)=><li> <Link to={`categorie/${item.id}`}>{item.name}</Link></li>)}
+              {data?.map((item)=><li> <Link to={`movies/categorie/${item.id}`}>{item.name}</Link></li>)}
             </ul>
           </li>
           <li>
             <NavLink
-              to="/4"
+              to="movies"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              MOVIES
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/movies/recommended"
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
             >
               RECOMMENDED
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/5"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              NEWS
             </NavLink>
           </li>
         </ul>

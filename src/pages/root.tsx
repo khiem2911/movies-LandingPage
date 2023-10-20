@@ -1,6 +1,6 @@
 import {Outlet} from 'react-router-dom'
-import MainNavigation from "../Components/MainNavigation"
-import Footer from '../Components/Footer'
+import MainNavigation from '../UI/MainNavigation'
+import Footer from '../UI/Footer'
 const Root =()=>{
 
     

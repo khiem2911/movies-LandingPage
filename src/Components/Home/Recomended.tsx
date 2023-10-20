@@ -32,7 +32,7 @@ const Recommended = () => {
 
   if (data) {
     content = data.map((item) => (
-      <div>
+      <div key={item.id}>
         <PopulatedMovies
          
           id={item.id}

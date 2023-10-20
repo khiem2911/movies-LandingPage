@@ -1,4 +1,4 @@
-import BackgroundBanner from "../BackgroundBanner";
+import BackgroundBanner from "../../UI/BackgroundBanner";
 import Generic from "./Generic";
 import Button from "../../UI/Button";
 import classes from "./Detail.module.css";
@@ -10,11 +10,13 @@ import PopulatedMovies from "./PopulatedMovies";
 import YouTube from "react-youtube";
 import { sideopts } from "../../constant/videosOTP";
 import Recommended from "./Recomended";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import TopNews from "./TopNews";
+import Modal from "../../UI/Modal";
 
 const Detail = () => {
   const { data, generic, videos } = useLoaderData() as data;
+  const [modal,setModal] = useState(false)
   const customOtps = {
     height: "350",
     width: "640",
@@ -22,6 +24,12 @@ const Detail = () => {
       autoplay: 0,
     },
   };
+
+
+  const onVideoTrailer = () =>{
+    setModal(!modal)
+  }
+
   const {id} = useParams()
 
   const onChangeDetail = () =>{
@@ -60,10 +68,11 @@ const Detail = () => {
       <BackgroundBanner
         bgDrop={`https://image.tmdb.org/t/p/original${data.backdrop_path}`}
       />
+      {modal && <Modal onClick={onVideoTrailer} videoKey={trailer} />}
       <div className={classes.info_banner}>
         <h1 onClick={()=>onChangeDetail()}>{data.title}</h1>
         <Generic items={genericsName} />
-        <Button  classes={classes.btn}>
+        <Button onClick={onVideoTrailer}  classes={classes.btn}>
           <span >Watch Me</span>
           <img
             src="https://clipart-library.com/images_k/play-button-image-transparent/play-button-image-transparent-14.png"
