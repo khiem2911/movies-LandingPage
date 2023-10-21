@@ -11,7 +11,18 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index:10
+  z-index:10;
+}
+@media screen and (max-width:767px) {
+    .navigation{
+      padding-left: 0.25rem;
+    }
+    .navigation .list{
+      flex-wrap: wrap;
+      width: 20rem;
+      justify-content: center;
+    
+    }
 }
 .navigation .list a {
   color: white;

@@ -1,14 +1,15 @@
 .container_recommended{
     padding-left: 10rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
 }
 .container_recommended h2{
     color: red;
 }
-.recommened{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
+@media screen and (max-width:767px) {
+  .container_recommended {
+    padding-left: 0.5rem;
+  }
 }
 .info_populate img{
     width: 24px;
@@ -31,13 +32,4 @@
     border-radius: 12px;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   }
-  .recommened_Movies{
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    padding-bottom: 5rem;
-    overflow: hidden;
-   
-  }
+ 

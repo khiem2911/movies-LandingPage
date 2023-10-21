@@ -57,7 +57,7 @@ const Home = () => {
       </div>
       <Categories />
       <Recommended />
-      <TopNews gap="15rem" horizon="row"/>
+     
     </>
   );
 };

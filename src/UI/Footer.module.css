@@ -4,7 +4,30 @@
     bottom: 0;
     background-color: #f9f3f3;
     padding-top: 3rem;
+    overflow: hidden;
+    width: 100%;
 }
+@media screen and (max-width:767px) {
+    .container_footer{
+        padding-left: 0.5rem;
+        text-align: center;
+    }
+    .content_footer{
+        flex-direction: column;
+    }
+    .container_link{
+        width: 90%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .register{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10rem;
+    }
+  }
 .container_footer h2{
     color: red;
 }

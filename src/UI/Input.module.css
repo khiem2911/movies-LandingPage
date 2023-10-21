@@ -6,6 +6,12 @@
     border: none;
     box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.5)
 }
+@media screen and (max-width:767px) {
+    .input{
+        width: 70%;
+        padding: 0.5rem;
+    }
+}
 .input::placeholder{
     color: #fe6263;
     font-weight: bold;

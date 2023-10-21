@@ -73,7 +73,7 @@ const Categories = () => {
             id={item.id}
             width={200}
             height={300}
-            bgImage={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
+            bgImage={`https://image.tmdb.org/t/p/original${item.poster_path}`}
           />
           <InfoMovies title={item.title} genericsMovies={item.genre_ids} />
         </div>

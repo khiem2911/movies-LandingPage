@@ -17,13 +17,7 @@ import Modal from "../../UI/Modal";
 const Detail = () => {
   const { data, generic, videos } = useLoaderData() as data;
   const [modal,setModal] = useState(false)
-  const customOtps = {
-    height: "350",
-    width: "640",
-    playerVars: {
-      autoplay: 0,
-    },
-  };
+ 
 
 
   const onVideoTrailer = () =>{
@@ -121,10 +115,11 @@ const Detail = () => {
             <h2>Polt Summary</h2>
             <p>{data.overview}</p>
           </div>
-          <div className="movie_video">
-            <h2>Trailer & Videos</h2>
+          
+          <div className={classes.movies_video}>
+          <h2>Trailer & Videos</h2>
             <div className={classes.custom_youtube}>
-              <YouTube opts={customOtps} videoId={trailer}></YouTube>
+              <YouTube className={classes.mainTrailer} videoId={trailer}></YouTube>
             </div>
             <div className={classes.bts_videos}>
               {keysVideo.map((item) => (
@@ -134,9 +129,6 @@ const Detail = () => {
               ))}
             </div>
           </div>
-        </div>
-        <div className={classes.topNews_side}>
-        <TopNews gap="5rem" horizon="column"/>
         </div>
       </div>
       <Recommended  />

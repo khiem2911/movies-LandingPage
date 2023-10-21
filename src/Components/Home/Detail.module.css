@@ -8,13 +8,12 @@
   filter: brightness(0) invert(1);
   margin-left: 10px;
 }
-
 .movie_detail h2 {
   padding-bottom: 1rem;
 }
 .info_banner {
   position: absolute;
-  bottom: 30rem;
+  bottom: 25rem;
   padding-left: 10rem;
 }
 .info_banner h1 {
@@ -89,4 +88,65 @@
 }
 .topNews_side{
   max-width: 50rem;
+}
+.movies_video{
+  display: flex;
+  flex-direction: column;
+}
+.mainTrailer{
+  width: 640px;
+  height:350px ; 
+}
+@media screen and (max-width: 767px) {
+  .info_banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 3rem;
+    
+   
+  }
+  .header_detail{
+    flex-wrap: wrap;
+    gap: 7rem;
+  }
+  .bts_videos{
+    flex-direction: column;
+    justify-content: center;
+    width: 10rem;
+  }
+  .content_detail{
+   align-items: center;
+   padding: 2rem 0rem 10rem 2rem;
+  }
+  .custom_youtube{
+    text-align: center;
+    width: 20rem;
+  }
+  .movies_video { 
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_detail{
+    flex-wrap: wrap;
+  }
+  .Summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .movie_detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-left: 0.25rem;
+  }
+  .img_container{
+    padding-left: 2rem;
+  }
 }

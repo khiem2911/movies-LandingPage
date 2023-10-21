@@ -48,7 +48,7 @@ const Recommended = () =>{
                   />
                 </Link>
                 <div className={classes.infoMovie}>
-                  <p>{item.title}</p>
+                  <p>{item.title.length>30 ? item.title.slice(0,20) + '...' : item.title}</p>
                   <div className={classes.voteInfo}>
                     <FaStar />
                     <p>{item.vote_average}</p>

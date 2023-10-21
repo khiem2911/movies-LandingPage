@@ -2,15 +2,12 @@ import { NavLink, Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import { useQuery } from "@tanstack/react-query";
 import { fetchGenres } from "../http/moveis";
-import {genericCategoris} from "../model/Generic";
+import { genericCategoris } from "../model/Generic";
 const MainNavigation = () => {
-
-
- const {data} = useQuery<genericCategoris[]>({
-    queryKey:['genres'],
-    queryFn:()=>fetchGenres()
-  })
-
+  const { data } = useQuery<genericCategoris[]>({
+    queryKey: ["genres"],
+    queryFn: () => fetchGenres(),
+  });
 
   return (
     <div className={classes.navigation}>
@@ -28,13 +25,13 @@ const MainNavigation = () => {
           </li>
           <li>
             <NavLink
-              to="/"
+              to="/movies/recommended"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
             >
-              CATEGORIES
+              RECOMMENDED
             </NavLink>
-            <ul className={classes.sub_menu}>
-              {data?.map((item)=><li> <Link to={`movies/categorie/${item.id}`}>{item.name}</Link></li>)}
-            </ul>
           </li>
           <li>
             <NavLink
@@ -47,14 +44,15 @@ const MainNavigation = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/movies/recommended"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              RECOMMENDED
-            </NavLink>
+            <NavLink to="/">CATEGORIES</NavLink>
+            <ul className={classes.sub_menu}>
+              {data?.map((item) => (
+                <li>
+                  {" "}
+                  <Link to={`movies/categorie/${item.id}`}>{item.name}</Link>
+                </li>
+              ))}
+            </ul>
           </li>
         </ul>
       </nav>
