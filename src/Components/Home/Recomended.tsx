@@ -63,7 +63,7 @@ const Recommended = () => {
             src="https://clipart-library.com/images_k/play-button-image-transparent/play-button-image-transparent-14.png"
             alt="Play Icon"
           />
-          <span id={classes.score}>{item.vote_average}</span>
+          <span id={classes.score}>{Math.round(item.vote_average).toFixed(1)}</span>
         </div>
         <InfoMovies title={item.title} genericsMovies={item.genre_ids} />
       </PopulatedMovies>

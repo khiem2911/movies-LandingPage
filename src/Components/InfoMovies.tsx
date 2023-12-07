@@ -24,7 +24,7 @@ const InfoMovies:React.FC<infoMovies> = (props) => {
   if(props.title){
     if(props.title.length>maxLength)
     {
-     truncatedLength = props.title.substring(0,props.title.length-10)+"..."
+     truncatedLength = props.title.substring(0,props.title.length-35)+"..."
     }else
     {
     truncatedLength = props.title
